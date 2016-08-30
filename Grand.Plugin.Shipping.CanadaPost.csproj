@@ -8,8 +8,8 @@
     <ProjectGuid>{D70F1294-BD6C-4B80-ADCB-618655B6C094}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Nop.Plugin.Shipping.CanadaPost</RootNamespace>
-    <AssemblyName>Nop.Plugin.Shipping.CanadaPost</AssemblyName>
+    <RootNamespace>Grand.Plugin.Shipping.CanadaPost</RootNamespace>
+    <AssemblyName>Grand.Plugin.Shipping.CanadaPost</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -22,7 +22,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\Presentation\Nop.Web\Plugins\Shipping.CanadaPost\</OutputPath>
+    <OutputPath>..\..\Presentation\Grand.Web\Plugins\Shipping.CanadaPost\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -31,7 +31,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>..\..\Presentation\Nop.Web\Plugins\Shipping.CanadaPost\</OutputPath>
+    <OutputPath>..\..\Presentation\Grand.Web\Plugins\Shipping.CanadaPost\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
