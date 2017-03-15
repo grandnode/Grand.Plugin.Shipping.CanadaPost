@@ -18,6 +18,7 @@ using Grand.Services.Localization;
 using Grand.Services.Shipping;
 using Grand.Services.Shipping.Tracking;
 using Grand.Core.Infrastructure;
+using Grand.Core.Domain.Orders;
 
 namespace Grand.Plugin.Shipping.CanadaPost
 {
@@ -221,11 +222,11 @@ namespace Grand.Plugin.Shipping.CanadaPost
 
             var usedMeasureWeight = _measureService.GetMeasureWeightBySystemKeyword("kg");
             if (usedMeasureWeight == null)
-                throw new NopException("CanadaPost shipping service. Could not load \"kg\" measure weight");
+                throw new GrandException("CanadaPost shipping service. Could not load \"kg\" measure weight");
 
             var usedMeasureDimension = _measureService.GetMeasureDimensionBySystemKeyword("meters");
             if (usedMeasureDimension == null)
-                throw new NopException("CanadaPost shipping service. Could not load \"meter(s)\" measure dimension");
+                throw new GrandException("CanadaPost shipping service. Could not load \"meter(s)\" measure dimension");
 
             foreach (var packageItem in getShippingOptionRequest.Items)
             {
@@ -420,6 +421,16 @@ namespace Grand.Plugin.Shipping.CanadaPost
             this.DeletePluginLocaleResource("Plugins.Shipping.CanadaPost.Fields.CustomerId.Hint");
             
             base.Uninstall();
+        }
+
+        public bool HideShipmentMethods(IList<ShoppingCartItem> cart)
+        {
+            return false;
+        }
+
+        public Type GetControllerType()
+        {
+            return typeof(Controllers.ShippingCanadaPostController);
         }
 
         #endregion
